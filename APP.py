@@ -3,7 +3,7 @@ import random
 
 st.set_page_config(page_title="Hobby & Interest Chatbot", page_icon="🎯")
 
-st.title("🎯 Hobby & Interest Chatbot")
+st.title("Hobby Hub")
 st.write("Ask me anything about hobbies, interests, and what you might enjoy!")
 
 # Example hobby categories
