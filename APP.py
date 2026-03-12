@@ -12,7 +12,7 @@ st.write("Ask me anything about hobbies, interests, and what you might enjoy!")
 logo_path = os.path.join(os.path.dirname(__file__), "Logo.png")
 
 if os.path.exists(logo_path):
-    st.image(logo_path, width=120)
+    st.image(logo_path, width=300)
 else:
     st.warning(f"Logo not found at '{logo_path}'. Make sure the file exists in the same folder as APP.py.")
 
