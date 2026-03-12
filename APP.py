@@ -1,6 +1,6 @@
 import streamlit as st
 import random
-st.image("/home/adminuser/mount/src/hobby-hub/images/logo.png", width=120)
+
 st.title("Hobby Hub")
 st.write("Ask me anything about hobbies, interests, and what you might enjoy!")
 st.image("images/logo.png", width=120)
@@ -29,6 +29,8 @@ def bot_reply(user_msg):
 # Chat UI
 with st.form("chat_form"):
     user_input = st.text_input("You:", placeholder="Ask about hobbies or interests...")
+    st.image("/home/adminuser/mount/src/hobby-hub/images/logo.png", width=120)
+    
     submitted = st.form_submit_button("Send")
 if submitted and user_input:
     st.write("**You:**", user_input)
