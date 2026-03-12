@@ -40,9 +40,3 @@ with st.form("chat_form"):
 if submitted and user_input:
     st.write("**You:**", user_input)
     st.write("**Bot:**", bot_reply(user_input))
-my-chatbot/
-│
-├── app.py
-├── requirements.txt
-└── images/
-    └── hobby_hub_logo.png
