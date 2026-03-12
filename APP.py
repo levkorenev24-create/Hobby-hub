@@ -40,3 +40,13 @@ with st.form("chat_form"):
 if submitted and user_input:
     st.write("**You:**", user_input)
     st.write("**Bot:**", bot_reply(user_input))
+import streamlit as st
+import random
+
+st.set_page_config(page_title="Hobby & Interest Chatbot", page_icon="🎯")
+
+# Add logo
+st.image("logo.png", width=120)
+
+st.title("Hobby Hub")
+st.write("Ask me anything about hobbies, interests, and what you might enjoy!")
