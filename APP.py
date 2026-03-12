@@ -5,7 +5,7 @@ import os
 logo_path = os.path.join(os.path.dirname(__file__), "Logo.png")
 
 if os.path.exists(logo_path):
-    st.image(logo_path, width=500)
+    st.image(logo_path, width=400)
 else:
     st.warning(f"Logo not found at '{logo_path}'. Make sure the file exists in the same folder as APP.py.")
 
