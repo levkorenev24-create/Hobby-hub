@@ -1,15 +1,13 @@
 import streamlit as st
+import random
 import os
 
-# Logo path
-logo_path = os.path.join(os.path.dirname(__file__), "images", "Logo.png")
-
-# Show logo first
-st.image(logo_path, width=120)
-
-# Then show the title
+# ------------------------------
+# Page Title and Logo
+# ------------------------------
 st.title("Hobby Hub")
 st.write("Ask me anything about hobbies, interests, and what you might enjoy!")
+
 
 # Robust logo path: relative to this Python file
 logo_path = os.path.join(os.path.dirname(__file__), "Logo.png")
