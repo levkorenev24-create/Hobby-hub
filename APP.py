@@ -1,6 +1,8 @@
 import streamlit as st
 import random
 import os
+# Show logo first
+st.image(logo_path, width=120)
 
 # ------------------------------
 # Page Title and Logo
