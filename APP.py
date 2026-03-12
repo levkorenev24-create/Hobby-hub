@@ -1,6 +1,13 @@
 import streamlit as st
 import random
 import os
+# Robust logo path: relative to this Python file
+logo_path = os.path.join(os.path.dirname(__file__), "Logo.png")
+
+if os.path.exists(logo_path):
+    st.image(logo_path, width=400)
+else:
+    st.warning(f"Logo not found at '{logo_path}'. Make sure the file exists in the same folder as APP.py.")
 
 # ------------------------------
 # Page Title and Logo
@@ -8,13 +15,6 @@ import os
 st.title("Hobby Hub")
 st.write("Ask me anything about hobbies, interests, and what you might enjoy!")
 
-# Robust logo path: relative to this Python file
-logo_path = os.path.join(os.path.dirname(__file__), "Logo.png")
-
-if os.path.exists(logo_path):
-    st.image(logo_path, width=120)
-else:
-    st.warning(f"Logo not found at '{logo_path}'. Make sure the file exists in the same folder as APP.py.")
 
 # ------------------------------
 # Hobby Categories
