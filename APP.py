@@ -1,37 +1,57 @@
 import streamlit as st
 import random
+import os
 
+# ------------------------------
+# Page Title and Logo
+# ------------------------------
 st.title("Hobby Hub")
 st.write("Ask me anything about hobbies, interests, and what you might enjoy!")
-st.image("images/logo.png", width=120)
-st.title("Hobby Hub")
-st.write("Ask me anything about hobbies, interests, and what you might enjoy!")
-# Example hobby categories
+
+# Safely load logo
+logo_path = "images/logo.png"
+if os.path.exists(logo_path):
+    st.image(logo_path, width=120)
+else:
+    st.warning(f"Logo not found at '{logo_path}'. Make sure the file exists.")
+
+# ------------------------------
+# Hobby Categories
+# ------------------------------
 HOBBY_CATEGORIES = [
     "Sports", "Music", "Art", "Games", "Technology", "Reading",
     "Writing", "Cooking", "Outdoors", "Fitness", "Collecting",
     "Learning", "Creative hobbies", "Relaxing hobbies", "Social hobbies"
 ]
-# Simple chatbot logic
+
+# ------------------------------
+# Chatbot Logic
+# ------------------------------
 def bot_reply(user_msg):
     user_msg = user_msg.lower()
-    # If user asks for hobby suggestion
+    
+    # Suggest a hobby
     if "suggest" in user_msg or "idea" in user_msg or "hobby" in user_msg:
         return "How about trying **" + random.choice(HOBBY_CATEGORIES) + "**?"
-    # If user asks "what hobbies do you know?"
+    
+    # List known hobbies
     if "what hobbies" in user_msg:
         return "Here are some hobbies I know:\n- " + "\n- ".join(HOBBY_CATEGORIES)
-    # If user asks "what is a good hobby for me?"
+    
+    # Give advice for personal hobby
     if "for me" in user_msg:
         return "Tell me about what you enjoy — indoors or outdoors? Calm or active?"
-    # Default response
+    
+    # Default reply
     return "That's interesting! Tell me more about what you enjoy."
+
+# ------------------------------
 # Chat UI
+# ------------------------------
 with st.form("chat_form"):
     user_input = st.text_input("You:", placeholder="Ask about hobbies or interests...")
-    st.image("/home/adminuser/mount/src/hobby-hub/images/logo.png", width=120)
-    
     submitted = st.form_submit_button("Send")
+
 if submitted and user_input:
     st.write("**You:**", user_input)
     st.write("**Bot:**", bot_reply(user_input))
