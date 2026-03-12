@@ -1,5 +1,6 @@
 import streamlit as st
 import random
+st.image("/home/adminuser/mount/src/hobby-hub/images/logo.png", width=120)
 st.title("Hobby Hub")
 st.write("Ask me anything about hobbies, interests, and what you might enjoy!")
 st.image("images/logo.png", width=120)
