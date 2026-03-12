@@ -50,3 +50,4 @@ st.image("logo.png", width=120)
 
 st.title("Hobby Hub")
 st.write("Ask me anything about hobbies, interests, and what you might enjoy!")
+st.image("images/logo.png", width=120)
