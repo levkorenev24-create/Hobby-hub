@@ -2,7 +2,7 @@ import streamlit as st
 import os
 
 # Page setup
-st.set_page_config(page_title="Hobby Hub", page_icon="🎨")
+st.set_page_config(page_title="Hobby Hub", page_icon="Logo.png")
 
 # ---------- Logo ----------
 logo_path = os.path.join(os.path.dirname(__file__), "Logo.png")
@@ -13,7 +13,7 @@ else:
     st.warning("Logo.png not found. Make sure it is in the same folder as APP.py.")
 
 # ---------- Title ----------
-st.title("🎨 Hobby Hub Chatbot")
+st.title("Logo.png Hobby Hub Chatbot")
 st.write("Ask me anything about hobbies!")
 
 # ---------- Knowledge Base ----------
