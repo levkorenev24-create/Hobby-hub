@@ -1,13 +1,16 @@
 import streamlit as st
 import os
 
+# Page setup
 st.set_page_config(page_title="Hobby Hub", page_icon="🎨")
 
 # ---------- Logo ----------
 logo_path = os.path.join(os.path.dirname(__file__), "Logo.png")
 
 if os.path.exists(logo_path):
-st.image(logo_path, width=150)
+    st.image(logo_path, width=150)
+else:
+    st.warning("Logo.png not found. Make sure it is in the same folder as APP.py.")
 
 # ---------- Title ----------
 st.title("🎨 Hobby Hub Chatbot")
@@ -15,6 +18,7 @@ st.write("Ask me anything about hobbies!")
 
 # ---------- Knowledge Base ----------
 qa_pairs = {
+
 "what are your hobbies": "My hobbies include learning new things, chatting with people, and exploring fun topics.",
 "why are hobbies important": "Hobbies help people relax, learn skills, and enjoy their free time.",
 "how can i find a new hobby": "Try new activities, watch tutorials, or think about what makes you happy.",
@@ -58,7 +62,7 @@ qa_pairs = {
 "is learning magic tricks a hobby": "Yes, it’s fun and entertaining.",
 
 "can hobbies help make friends": "Yes, shared hobbies bring people together.",
-"are group hobbies better than solo hobbies": "Both are good—it depends on the person.",
+"are group hobbies better than solo hobbies": "Both are good — it depends on the person.",
 "can hobbies improve confidence": "Yes, learning skills builds confidence.",
 "is volunteering a hobby": "It can be a meaningful hobby.",
 "can hobbies reduce stress": "Yes, hobbies help people relax.",
@@ -76,21 +80,22 @@ qa_pairs = {
 "what is the best hobby": "The best hobby is the one you enjoy most!"
 }
 
-# ---------- Chat Input ----------
-user_input = st.text_input("Ask a question:")
+# ---------- User Input ----------
+user_input = st.text_input("Ask a question about hobbies:")
 
-# ---------- Chat Logic ----------
+# ---------- Chatbot Logic ----------
 if user_input:
-question = user_input.lower().strip().replace("?", "")
 
-answer = None
+    question = user_input.lower().strip().replace("?", "")
 
-for q in qa_pairs:
-if q in question:
-answer = qa_pairs[q]
-break
+    answer = None
 
-if answer:
-st.success(answer)
-else:
-st.info("That's an interesting question! Try asking about hobbies, sports, music,
+    for q in qa_pairs:
+        if q in question:
+            answer = qa_pairs[q]
+            break
+
+    if answer:
+        st.success(answer)
+    else:
+        st.info("That's an interesting question! Try asking about hobbies, sports, music, games, or creativity.")
