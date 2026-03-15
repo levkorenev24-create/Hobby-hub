@@ -13,7 +13,7 @@ else:
     st.warning("Logo.png not found. Make sure it is in the same folder as APP.py.")
 
 # ---------- Title ----------
-st.title("Hobby Hub Chatbot")
+st.title("Hobby Hub")
 st.write("Ask me anything about hobbies!")
 
 # ---------- Knowledge Base ----------
