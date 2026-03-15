@@ -8,12 +8,12 @@ st.set_page_config(page_title="Hobby Hub", page_icon="Logo.png")
 logo_path = os.path.join(os.path.dirname(__file__), "Logo.png")
 
 if os.path.exists(logo_path):
-    st.image(logo_path, width=150)
+    st.image(logo_path, width=350)
 else:
     st.warning("Logo.png not found. Make sure it is in the same folder as APP.py.")
 
 # ---------- Title ----------
-st.title("Logo.png Hobby Hub Chatbot")
+st.title("Hobby Hub Chatbot")
 st.write("Ask me anything about hobbies!")
 
 # ---------- Knowledge Base ----------
