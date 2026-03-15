@@ -13,8 +13,7 @@ else:
     st.warning("Logo.png not found. Make sure it is in the same folder as APP.py.")
 
 # ---------- Title ----------
-st.title("")
-st.write("Ask me anything about hobbies!")
+st.title("Ask me anything about hobbies!")
 
 # ---------- Knowledge Base ----------
 qa_pairs = {
