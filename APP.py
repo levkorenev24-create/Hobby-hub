@@ -2,7 +2,7 @@ import streamlit as st
 import os
 
 # Page setup
-st.set_page_config(page_title="Hobby Hub", page_icon="<img src="blob:chrome-untrusted://media-app/efad74be-0627-4eaa-beb7-a4396c792cd2" alt="Screenshot_2026-03-15_11.34.00-removebg-preview.png"/>")
+st.set_page_config(page_title="Hobby Hub", page_icon="Logo.png")
 
 # ---------- Logo ----------
 logo_path = os.path.join(os.path.dirname(__file__), "Logo.png")
