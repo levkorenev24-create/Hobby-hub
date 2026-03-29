@@ -1,7 +1,3 @@
-Sure — here is the same idea remade in Python with Flask. Flask is a lightweight Python web framework commonly used to build small web apps and APIs, which makes it a good fit for a simple chatbot backend.
-Python backend
-This version serves a small HTML page and sends user messages to a chat completions API from Python. It uses Flask for the web server and requests for the HTTP call to the model API.
-python
 # app.py
 from flask import Flask, request, jsonify, send_from_directory
 import requests
