@@ -15,6 +15,14 @@ else:
 # ---------- Title ----------
 st.title("Ask me anything about hobbies!")
 
+# ---------- QR Code ----------
+qr_path = os.path.join(os.path.dirname(__file__), "qr_code.png")
+
+if os.path.exists(qr_path):
+    st.image(qr_path, width=180, caption="Scan to open the Scratch project")
+else:
+    st.warning("qr_code.png not found. Put it in the same folder as APP.py.")
+
 # ---------- Knowledge Base ----------
 qa_pairs = {
 
