@@ -77,7 +77,6 @@ qa_pairs = {
 "what hobby is good for creativity": "Art, music, or writing.",
 "can hobbies make you happier": "Yes, doing what you enjoy boosts happiness.",
 "what is the best hobby": "The best hobby is the one you enjoy most!"
-"since when do you start riding as hobby": "since 1994",
     }
 
 # ---------- User Input ----------
